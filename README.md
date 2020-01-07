@@ -1,4 +1,4 @@
-# Mixed-Language Training for Cross-lingual Dialogue Systems
+# Mixed-Language Training for Cross-lingual Task-oriented Dialogue Systems
 
 <img src="img/pytorch-logo-dark.png" width="10%"> [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
