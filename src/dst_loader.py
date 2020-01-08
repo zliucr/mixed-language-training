@@ -38,13 +38,13 @@ def collate_fn(data):
     return dialogu_idx, padded_seqs, lengths, acts_request, acts_slot, acts_values, slot_names, turn_slot_labels, turn_request_labels
 
 def load_data(params, dialogue_ontology, mapping=None):
-    pri_turns_train = load_woz_data("dst_data/tok_woz_train_en.json", "en", dialogue_ontology, mapping=mapping)
-    pri_turns_val = load_woz_data("dst_data/tok_woz_validate_en.json", "en", dialogue_ontology, mapping=mapping)
+    pri_turns_train = load_woz_data("data/dst/dst_data/tok_woz_train_en.json", "en", dialogue_ontology, mapping=mapping)
+    pri_turns_val = load_woz_data("data/dst/dst_data/tok_woz_validate_en.json", "en", dialogue_ontology, mapping=mapping)
     val_count = len(pri_turns_val)
     pri_turns_train = pri_turns_train + pri_turns_val[0:int(0.75 * val_count)]
 
-    tgt_pri_turns_val = load_woz_data("dst_data/tok_woz_validate_"+params.trans_lang+".json", params.trans_lang, dialogue_ontology, mapping=mapping)
-    tgt_pri_turns_test = load_woz_data("dst_data/tok_woz_test_"+params.trans_lang+".json", params.trans_lang, dialogue_ontology, mapping=mapping)
+    tgt_pri_turns_val = load_woz_data("data/dst/dst_data/tok_woz_validate_"+params.trans_lang+".json", params.trans_lang, dialogue_ontology, mapping=mapping)
+    tgt_pri_turns_test = load_woz_data("data/dst/dst_data/tok_woz_test_"+params.trans_lang+".json", params.trans_lang, dialogue_ontology, mapping=mapping)
     
     return pri_turns_train, tgt_pri_turns_val, tgt_pri_turns_test
 

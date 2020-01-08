@@ -346,7 +346,7 @@ def preprocess_nlu_data(data, lang, clean_txt=True, token_mapping=None, vocab_pa
     # print("============ Preprocess %s data ============" % lang)
     logger.info("============ Preprocess %s data ============" % lang)
 
-    data_folder = os.path.join('./nlu_data/', lang)
+    data_folder = os.path.join('./data/nlu/nlu_data/', lang)
     train_path = os.path.join(data_folder, "train-%s.tsv" % lang)
     eval_path = os.path.join(data_folder, "eval-%s.tsv" % lang)
     # test_path = os.path.join(data_folder, "test-%s.tsv" % lang)
